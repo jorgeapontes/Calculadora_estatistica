@@ -1,0 +1,53 @@
+body {
+    background: #222222;
+    margin: 0;
+}
+
+.content {
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #555555;
+    border: 10px;
+    color: white;
+    border-radius: 30px;
+}
+
+input {
+    width: 40%;
+}
+
+#btn, #btn2 {
+    width: 49.5%;
+}
+
+#btn {
+    margin-right: 1%;
+}
+
+#calcula {
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.botoes {
+    margin-top: 1rem;
+    display: flex;
+}
+
+.resultados {
+    width: 50%;
+    text-align: right;
+}
+
+.res-container {
+    position: relative;
+    left: 10.5%;
+}
+
+.tabela {
+    margin-right: -3.2rem;
+}
