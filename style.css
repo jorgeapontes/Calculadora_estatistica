@@ -53,70 +53,87 @@ input {
 }
 
 
+/* Media query para telas menores (smartphones) */
 @media screen and (max-width: 600px) {
 
-    body {
-        
-        padding: 0 10px;
+    /* Remove a rolagem horizontal indesejada */
+    body, html {
+        overflow-x: hidden;
     }
 
     .container {
-  
+        /* Ajusta a largura e padding para se adaptar à tela */
         width: 100%;
-    
         padding: 10px;
-     
         box-shadow: none;
-  
         border-radius: 5px;
-        background-color: #f0f0f0;
     }
 
-    .title {
+    .output-group {
+        /* Permite que os elementos fiquem lado a lado, se houver espaço */
+        flex-direction: row;
+        flex-wrap: wrap; /* Permite quebras de linha para acomodar o conteúdo */
+        justify-content: space-around; /* Distribui o espaço entre os itens */
+        gap: 10px; /* Adiciona um espaço entre os inputs para que não fiquem colados */
+    }
 
-        font-size: 24px;
-       
+    .output-group div {
+        /* Ajusta a largura de cada input para que caiba em 2 colunas */
+        flex-basis: 45%; /* Define a largura base de 45% para que caibam 2 por linha */
+        margin-bottom: 10px; /* Adiciona margem na parte inferior para espaçamento vertical */
+    }
+
+    .output-group label {
+        /* Garante que o rótulo não ocupe muito espaço */
+        font-size: 14px;
         text-align: center;
+        width: 100%;
     }
 
     .input-group,
-    .output-group {
-     
+    .results {
+        /* Mantém o layout de coluna para a entrada de dados e resultados */
         flex-direction: column;
         align-items: center;
     }
 
-    .input-group label,
-    .output-group label {
-   
-        font-size: 16px;
-        margin-bottom: 5px;
-    }
-
-    .data-input {
-     
+    .input-group,
+    .btn-container {
         width: 100%;
-
+    }
+    
+    .data-input {
+        width: 100%;
         height: 100px;
-
         padding: 8px;
-     
         resize: vertical;
     }
-
-    .btn-calculate {
     
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; /* Adiciona um espaço entre os botões */
+    }
+    
+    .btn-calculate,
+    .btn-input {
         width: 100%;
-     
         height: 50px;
-
         font-size: 18px;
     }
 
-    .results {
-  
-        margin-top: 15px;
-     
-        text-align: left;
+    /* Estilo para os inputs individuais (o que você disse que estão sumindo) */
+    .input-group input[type="text"] {
+        width: 100%;
+        box-sizing: border-box; /* Garante que padding e borda não aumentem o tamanho */
+        margin-bottom: 10px;
+    }
+
+    .results h4 {
+        font-size: 16px;
+    }
+
+    .results p {
+        font-size: 14px;
     }
 }
