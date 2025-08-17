@@ -92,4 +92,30 @@ input {
         overflow-x: auto;
         font-size: 14px;
     }
-}
+        /* ...existing code... */
+    
+    
+        /* ...seu código existente... */
+    
+        /* Inputs xi lado a lado, pmi/fi/fac embaixo */
+        .xi-group {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+        .xi-group input {
+            width: 48%;
+            min-width: 0;
+        }
+        .xi-dash {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #fff;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
